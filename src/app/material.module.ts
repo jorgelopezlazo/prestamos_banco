@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
     exports: [
@@ -22,7 +24,8 @@ import {MatTableModule} from '@angular/material/table';
         FormsModule,
         ReactiveFormsModule,
         MatNativeDateModule,
-        MatTableModule
+        MatTableModule,
+        MatGridListModule
     ],
     providers: [
         MatDatepickerModule

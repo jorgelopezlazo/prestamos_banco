@@ -13,4 +13,12 @@ export class ClientesService {
   getClientes():Observable<Cliente[]>{
     return this.http.get<Cliente[]>(this.apiURL);
   }
+
+  addClientes(cliente: any) {
+    return this.http.post<any>(this.apiURL, cliente)
+  }
+
+  detailCliente(detail: any):Observable<any>{
+    return this.http.post<any>(`${this.apiURL}/detalle`, detail)
+  }
 }

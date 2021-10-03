@@ -1,0 +1,66 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Crear cliente</span>
+    </mat-toolbar>
+    <mat-card style="margin-top: 10px;">
+        <form class="formulario" (ngSubmit)="onSubmit()" name="submitForm" [formGroup]="submitForm">
+            <mat-grid-list cols="4" rowHeight="60px">
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho-input">
+                        <mat-label>Nombre</mat-label>
+                        <input maxlength="70" placeholder="Erick Fimbres" formControlName="nombre" matInput required>
+                        <mat-error *ngIf="!submitForm.controls['nombre'].valid">
+                            El nombre es obligatorio
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="6">
+                    <img src="../../../../../assets/usuario.png" width="60%">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho-input">
+                        <mat-label>Correo electrónico</mat-label>
+                        <input maxlength="40" placeholder="erick@gmail.com" formControlName="email" matInput required>
+                        <mat-error *ngIf="!submitForm.controls['email'].valid">
+                            El correo es obligatorio
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho-input">
+                        <mat-label>Cédula</mat-label>
+                        <input maxlength="20" placeholder="FREF2487521" formControlName="cedula" matInput required>
+                        <mat-error *ngIf="!submitForm.controls['cedula'].valid">
+                            La cedula es obligatoria
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho-input">
+                        <mat-label>Monto solicitado</mat-label>
+                        <input min="10000" max="100000" matInput type="number" formControlName="monto"
+                            placeholder="$10,000">
+                        <span matPrefix>$&nbsp;</span>
+                        <span matSuffix>.00</span>
+                        <mat-error *ngIf="!submitForm.controls['monto'].valid">
+                            El monto a pedir es obligatorio
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho-input">
+                        <mat-label>Fecha de pago</mat-label>
+                        <input placeholder="05/12/2022" matInput [matDatepicker]="picker" formControlName="fecha">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <!-- <button mat-raised-button style="margin-right: 25px;">ATRÁS</button> -->
+                    <button mat-raised-button>GUARDAR</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>

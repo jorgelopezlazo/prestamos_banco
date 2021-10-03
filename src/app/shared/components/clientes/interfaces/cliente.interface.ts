@@ -8,5 +8,6 @@ export interface Cliente {
    estado_credito: boolean;
    pago_credito: boolean; 
    solicitado: boolean;
+   adeudo: boolean;
    historial: [];
 }

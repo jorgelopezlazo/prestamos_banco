@@ -1,8 +1,7 @@
-<!-- <pre>
-    {{ clientes | json }}
-</pre> -->
 <mat-toolbar>
     <span>Módulo Clientes</span>
+    <div class="espacio-derecha"></div>
+    <button mat-raised-button (click)="goTo('clientes/nuevo')">NUEVO</button>
 </mat-toolbar>
 <mat-form-field appearance="standard">
     <mat-label>Filtros</mat-label>
@@ -43,13 +42,20 @@
         <!-- Estatus Column -->
         <ng-container matColumnDef="estado_credito">
             <th mat-header-cell *matHeaderCellDef> Estatus </th>
-            <td mat-cell *matCellDef="let element"> {{element.estado_credito}} </td>
+            <td mat-cell *matCellDef="let element">
+                <span *ngIf="(element.estado_credito === false && element.solicitado === true)">Rechazado</span>
+                <span *ngIf="(element.estado_credito === false && element.solicitado === false)">Sin solitar</span>
+                <span *ngIf="(element.estado_credito === true)">Aprobado</span>
+            </td>
         </ng-container>
 
         <!-- Pago Column -->
         <ng-container matColumnDef="pago_credito">
             <th mat-header-cell *matHeaderCellDef> Adeudo </th>
-            <td mat-cell *matCellDef="let element"> {{element.adeudo}} </td>
+            <td mat-cell *matCellDef="let element"> 
+                <span *ngIf="(element.adeudo === false)">Sin deudas</span>
+                <span *ngIf="(element.adeudo === true)">Con deudas</span>    
+            </td>
         </ng-container>
 
         <!-- Acciones Column -->
@@ -75,23 +81,3 @@
     <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
     </mat-paginator>
 </div>
-
-<!-- <section class="clientes">
-    <mat-card class="card" *ngFor="let cliente of clientes">
-        <mat-card-title>{{cliente.nombre}}</mat-card-title>
-        <mat-card-content>
-            Correo: {{cliente.correo}}
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-flat-button>
-                Solicitar
-            </button>
-            <button mat-flat-button>
-                Pagar
-            </button>
-            <button mat-flat-button>
-                <mat-icon>remove_red_eye</mat-icon>
-            </button>
-        </mat-card-actions>
-    </mat-card>
-</section> -->

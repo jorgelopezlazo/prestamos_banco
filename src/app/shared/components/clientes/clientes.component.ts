@@ -5,6 +5,7 @@ import { Cliente } from './interfaces/cliente.interface';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 // export interface PeriodicElement {
 //   nombre: string;
@@ -25,7 +26,7 @@ export class ClientesComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   clientes: Cliente[] = [];
-  constructor(private clienteSvc: ClientesService) { }
+  constructor(private clienteSvc: ClientesService, private router: Router) { }
   // ELEMENT_DATA: Cliente[] = [
   //   {id: 0, nombre: 'Juan Perez', correo: 'juan@gmail.com', cedula: 'JUPER058', valor_solicitado: 25000, fecha_pagar: '', estado_credito: true, pago_credito: false, solicitado: true, historial: []},
   //   {id: 1, nombre: 'Pedro López', correo: 'juan@gmail.com', cedula: 'JUPER058', valor_solicitado: 25000, fecha_pagar: '25/10/2021', estado_credito: true, pago_credito: false, solicitado: true, historial: []},
@@ -55,7 +56,12 @@ export class ClientesComponent implements OnInit {
     }
     ngAfterViewInit() {
       if(this.clientes.length) this.dataSource.paginator = this.paginator;
+      
   }
+
+  goTo(url: string){
+    this.router.navigate([url]);
+   }
 
   // cargarClientes() {
   //   this.clientes = this.clienteSvc.getClientes();
