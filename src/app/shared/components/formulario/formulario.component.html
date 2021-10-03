@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit()" name="submitForm" [formGroup]="submitForm">
+    <div class=body>
+        <div class="formulario">
+            <h1>Nuevo cliente</h1>
+            <mat-form-field class="ancho-input">
+                <mat-label>Nombre</mat-label>
+                <input maxlength="70" placeholder="Erick Fimbres" formControlName="nombre" matInput required>
+                <mat-error *ngIf="!submitForm.controls['nombre'].valid">
+                    El nombre es obligatorio
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho-input">
+                <mat-label>Correo electrónico</mat-label>
+                <input maxlength="40" placeholder="erick@gmail.com" formControlName="email" matInput required>
+                <mat-error *ngIf="!submitForm.controls['email'].valid">
+                    El correo es obligatorio
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho-input">
+                <mat-label>Cédula</mat-label>
+                <input maxlength="20" placeholder="FREF2487521" formControlName="cedula" matInput required>
+                <mat-error *ngIf="!submitForm.controls['cedula'].valid">
+                    La cedula es obligatoria
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho-input">
+                <mat-label>Monto solicitado</mat-label>
+                <input min="10000" max="100000" matInput type="number" formControlName="monto" placeholder="$10,000">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+                <mat-error *ngIf="!submitForm.controls['monto'].valid">
+                    El monto a pedir es obligatorio
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="ancho-input">
+                <mat-label>Fecha de pago</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker">
+                </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <div>
+                  <button class="save-button" mat-raised-button>Guardar</button>
+              </div>
+        </div>
+
+    </div>
+</form>

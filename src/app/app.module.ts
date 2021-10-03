@@ -19,6 +19,11 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import { FondoComponent } from './shared/components/fondo/fondo.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +31,7 @@ import {MatTableModule} from '@angular/material/table';
     HeaderComponent,
     MenuComponent,
     ClienteComponent,
+    FondoComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,10 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     HttpClientModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

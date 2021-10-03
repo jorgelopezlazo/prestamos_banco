@@ -1,0 +1,43 @@
+.body {
+    width: 70%;
+    max-width: 700px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 0 auto;
+    border: 2px solid rgb(165, 165, 165);
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+.formulario {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.ancho-input {
+    width: 90%;
+}
+
+.mat-form-field {
+    width: 90%;
+}
+
+.save-button{
+    padding: 8px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 17px;
+    transition: all .4s;
+}
+
+.save-button:hover{
+    background-color: #255474;
+    color: white;
+    transition: all .4s;
+}
