@@ -6,6 +6,7 @@
     justify-content: center;
     height: 500px;
     margin: 0 auto;
+    margin-bottom: 80px;
     border: 2px solid rgb(165, 165, 165);
     margin-top: 40px;
     border-radius: 20px;
@@ -15,6 +16,7 @@
     width: 100%;
     margin-top: 30px;
     text-align: center;
+    
 }
 
 .ancho-input {
@@ -40,4 +42,13 @@
     background-color: #255474;
     color: white;
     transition: all .4s;
+}
+
+.mat-toolbar{
+    width: 85%;
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
 }

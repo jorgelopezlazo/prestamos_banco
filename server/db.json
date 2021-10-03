@@ -7,8 +7,20 @@
       "cedula": "INFR5675",
       "valor_solicitado": 50000,
       "fecha_pagar": "05/10/2021",
-      "estado_credito": true,
-      "pago_credito": false
+      "estado_credito": false,
+      "pago_credito": false,
+      "solicitado": false
+    },
+    {
+      "id": 0,
+      "nombre": "Esteban Valenzuela",
+      "correo": "esteban@gmail.com",
+      "cedula": "ESFR5675",
+      "valor_solicitado": 80000,
+      "fecha_pagar": "17/10/2021",
+      "estado_credito": false,
+      "pago_credito": false,
+      "solicitado": false
     },
     {
       "id": 1,
@@ -18,7 +30,19 @@
       "valor_solicitado": 10000,
       "fecha_pagar": "21/10/2021",
       "estado_credito": true,
-      "pago_credito": false
+      "pago_credito": false,
+      "solicitado": true
+    },
+    {
+      "id": 0,
+      "nombre": "Ricardo Echeverría",
+      "correo": "ricardo@gmail.com",
+      "cedula": "RCEV5675",
+      "valor_solicitado": 100000,
+      "fecha_pagar": "15/10/2021",
+      "estado_credito": false,
+      "pago_credito": false,
+      "solicitado": true
     }
   ],
   "stores": [

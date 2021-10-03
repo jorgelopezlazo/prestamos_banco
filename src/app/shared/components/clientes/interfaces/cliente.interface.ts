@@ -7,4 +7,6 @@ export interface Cliente {
    fecha_pagar: string;
    estado_credito: boolean;
    pago_credito: boolean; 
+   solicitado: boolean;
+   historial: [];
 }

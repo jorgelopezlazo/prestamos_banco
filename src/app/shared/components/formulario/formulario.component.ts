@@ -18,16 +18,14 @@ export class FormularioComponent implements OnInit {
   // }
 
   // clienteForm : FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private form: FormBuilder) {
   }
 
   ngOnInit(): void {
-    // this.clienteForm = new FormGroup(
-    //   email: new FormControl('', Validators.required, Validators.email)
-    // )
+    
   }
 
-  submitForm: FormGroup = this.fb.group({
+  submitForm: FormGroup = this.form.group({
     nombre: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     cedula: ['', [Validators.required]],
@@ -37,9 +35,16 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     if (!this.submitForm.valid) {
+      console.log(this.submitForm)
       return;
     }
-    console.log(this.submitForm.value);
+    
+    let values = this.submitForm.value
+    values.estado_credito = false;
+    values.pago_credito = false;
+    values.solicitado = false;
+    values.historial = [];
+    console.log(values);
   }
 
 }
