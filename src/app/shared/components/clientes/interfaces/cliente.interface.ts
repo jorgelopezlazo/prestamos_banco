@@ -1,6 +1,7 @@
 export interface Cliente {
    id: number;
    nombre: string;
+   correo: string;
    cedula: string;
    valor_solicitado: number;
    fecha_pagar: string;

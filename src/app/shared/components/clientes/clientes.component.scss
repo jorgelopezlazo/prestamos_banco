@@ -1,0 +1,22 @@
+section.clientes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .card {
+        margin: 5px;
+        min-height: 180px;
+        min-width: 400px;
+        max-width: 400px;
+        height: 100%;
+    }
+    
+    button {
+        width: 80px;
+        border: 1px solid #000;
+        margin-right: 15px;
+    }
+}
+
