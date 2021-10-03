@@ -5,6 +5,9 @@ import { ClientesRoutingModule } from './clientes-routing.module';
 import { ClientesComponent } from './clientes.component';
 import { MaterialModule } from 'src/app/material.module';
 import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import {MatTableModule} from '@angular/material/table';
     CommonModule,
     ClientesRoutingModule,
     MaterialModule,
-    MatTableModule
+    MatTableModule,
+    MatTooltipModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class ClientesModule { }

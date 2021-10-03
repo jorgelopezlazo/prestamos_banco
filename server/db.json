@@ -9,40 +9,44 @@
       "fecha_pagar": "05/10/2021",
       "estado_credito": false,
       "pago_credito": false,
-      "solicitado": false
+      "solicitado": false,
+      "adeudo": false
     },
     {
-      "id": 0,
+      "id": 1,
       "nombre": "Esteban Valenzuela",
       "correo": "esteban@gmail.com",
       "cedula": "ESFR5675",
       "valor_solicitado": 80000,
       "fecha_pagar": "17/10/2021",
-      "estado_credito": false,
+      "estado_credito": true,
       "pago_credito": false,
-      "solicitado": false
+      "solicitado": true,
+      "adeudo": false
     },
     {
-      "id": 1,
+      "id": 2,
       "nombre": "Erick Fimbres",
       "correo": "erick.fimbres@gmail.com",
       "cedula": "EFFC5675",
       "valor_solicitado": 10000,
       "fecha_pagar": "21/10/2021",
       "estado_credito": true,
-      "pago_credito": false,
-      "solicitado": true
+      "pago_credito": true,
+      "solicitado": true,
+      "adeudo": false
     },
     {
-      "id": 0,
+      "id": 3,
       "nombre": "Ricardo Echeverría",
       "correo": "ricardo@gmail.com",
       "cedula": "RCEV5675",
       "valor_solicitado": 100000,
       "fecha_pagar": "15/10/2021",
-      "estado_credito": false,
+      "estado_credito": true,
       "pago_credito": false,
-      "solicitado": true
+      "solicitado": true,
+      "adeudo": true
     }
   ],
   "stores": [
