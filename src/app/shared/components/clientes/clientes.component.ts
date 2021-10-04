@@ -21,7 +21,6 @@ export class ClientesComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   clientes: Cliente[] = [];
   constructor(private clienteSvc: ClientesService, private router: Router, public matDialog: MatDialog) { }
-
   displayedColumns: string[] = ['nombre', 'correo', 'cedula', 'valor_solicitado', 'fecha_pagar', 'estado_credito', 'pago_credito', 'acciones'];
   dataSource!: MatTableDataSource<any>;
 
@@ -33,14 +32,12 @@ export class ClientesComponent implements OnInit {
     this.clienteSvc.getClientes()
     .pipe(
       tap((clientes: Cliente[]) => {
-        console.log(clientes)
         if (localStorage.getItem('ruta_menu') === 'aprobadas') {
           clientes = clientes.filter(item => item.solicitado && item.estado_credito)
         }
         if (localStorage.getItem('ruta_menu') === 'rechazadas') {
           clientes = clientes.filter(item => item.solicitado && item.estado_credito === false)
         }
-        console.log(clientes)
         this.clientes = clientes
         this.dataSource = new MatTableDataSource(this.clientes)
       })
@@ -53,7 +50,6 @@ export class ClientesComponent implements OnInit {
   }
 
   openDialog(value: any) {
-    console.log(value)
     let historial = value.historial
     this.matDialog.open(ConfirmDialogComponent, {
       data: historial,
@@ -61,15 +57,14 @@ export class ClientesComponent implements OnInit {
   }
 
   openDialogInput(value: any) {
-    console.log(value)
     const dialogo1 = this.matDialog.open(ConfirmMontoComponent)
     dialogo1.afterClosed().subscribe(cantidad => {
-      console.log(cantidad)
+      value.valor_solicitado = cantidad.monto
+      this.solicitarPrestamo(value)
     });
   }
 
   solicitarPrestamo(data: any) {
-    console.log(data)
     let random_boolean = true;
     let date = new Date();
     if (!data.solicitado) {
@@ -79,8 +74,6 @@ export class ClientesComponent implements OnInit {
       'fecha_autorizado': date.toLocaleString("en-GB").substring(0,10),
       'prestamo': data.valor_solicitado
     })
-
-    console.log(data)
 
     const cliente: Cliente = {
       id: data?.id,
@@ -96,12 +89,9 @@ export class ClientesComponent implements OnInit {
       historial: data.historial
     }
 
-    console.log(cliente)
-
     this.clienteSvc.editCliente(cliente)
       .pipe(
         tap((cliente) => {
-          console.log(cliente)
           this.listarClientes();
         })
       )
@@ -109,7 +99,6 @@ export class ClientesComponent implements OnInit {
   }
 
   pagarPrestamo(data: any) {
-    console.log(data)
     const cliente: Cliente = {
       id: data?.id,
       nombre: data?.nombre,
@@ -124,12 +113,9 @@ export class ClientesComponent implements OnInit {
       historial: data.historial
     }
 
-    console.log(cliente)
-
     this.clienteSvc.editCliente(cliente)
       .pipe(
         tap((cliente) => {
-          console.log(cliente)
           this.listarClientes();
         })
       )

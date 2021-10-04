@@ -1,13 +1,28 @@
 <div>
     <h1 mat-dialog-title>Cantidad a solicitar</h1>
     <div mat-dialog-content>
-        <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
-            <mat-form-field>
-                <input min="10000" max="100000" matInput type="number" placeholder="Ingrese cantidad" required>
-            </mat-form-field>
+            <form class="formulario" (ngSubmit)="onSubmitCant()" name="submitForm" [formGroup]="submitForm">
+                <mat-grid-list cols="4" rowHeight="60px">
+                    <mat-grid-tile [colspan]="4" [rowspan]="1">
+                        <mat-form-field class="ancho-input">
+                            <mat-label>Monto solicitado</mat-label>
+                            <input min="10000" max="100000" matInput type="number" formControlName="monto"
+                                placeholder="10,000">
+                            <span matPrefix>$&nbsp;</span>
+                            <span matSuffix>.00</span>
+                            <mat-error *ngIf="!submitForm.controls['monto'].valid">
+                                El monto a pedir es obligatorio
+                            </mat-error>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="4" [rowspan]="1">
+                        <button mat-raised-button>GUARDAR</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </form>
         </div>
     </div>
-    <div mat-dialog-actions>
+    <!-- <div mat-dialog-actions>
         <button mat-button (click)="cancelar()">Cancelar</button>
         <button mat-button [mat-dialog-close]="data">Confirmar</button>
-    </div> 
+    </div>  -->

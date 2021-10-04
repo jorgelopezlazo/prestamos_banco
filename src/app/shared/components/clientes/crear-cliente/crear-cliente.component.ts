@@ -26,19 +26,16 @@ export class CrearClienteComponent implements OnInit {
 
   onSubmit() {
     if (!this.submitForm.valid) {
-      console.log(this.submitForm)
       return;
     }
     
     let values = this.submitForm.value
     values.id = `${values.cedula}-${(Math.round(Math.random() * (20000 - 10) + 10))}`
-    console.log(values);
     if(values.fecha !== "") {
       var date = new Date(values.fecha);
       values.fecha = date.toLocaleString("en-GB").substring(0,10);
     }
     
-    console.log(values.fecha)
     const cliente: Cliente = {
       id: values.id,
       nombre: values.nombre,
@@ -53,12 +50,9 @@ export class CrearClienteComponent implements OnInit {
       historial: []
     }
 
-    console.log(cliente)
-
     this.clienteSvc.addClientes(cliente)
       .pipe(
         tap((cliente) => {
-          console.log(cliente)
           this.router.navigate(['clientes']);
         })
       )

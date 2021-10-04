@@ -21,12 +21,12 @@
       "nombre": "Rodrigo Fuentes",
       "correo": "rodrigo@gmail.com",
       "cedula": "RODFUE3422",
-      "valor_solicitado": 45000,
+      "valor_solicitado": 15000,
       "fecha_pagar": "",
       "estado_credito": true,
-      "pago_credito": true,
+      "pago_credito": false,
       "solicitado": true,
-      "adeudo": false,
+      "adeudo": true,
       "historial": [
         {
           "fecha_autorizado": "03/10/2021",
@@ -43,6 +43,10 @@
         {
           "fecha_autorizado": "03/10/2021",
           "prestamo": 45000
+        },
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 15000
         }
       ]
     },
@@ -66,6 +70,41 @@
       "cedula": "ROB4532",
       "valor_solicitado": 18000,
       "fecha_pagar": "",
+      "estado_credito": false,
+      "pago_credito": false,
+      "solicitado": true,
+      "adeudo": false,
+      "historial": []
+    },
+    {
+      "id": "DFERTED3432-3547",
+      "nombre": "Claudia Ramos",
+      "correo": "claudia@gmail.com",
+      "cedula": "DFERTED3432",
+      "valor_solicitado": 15750,
+      "fecha_pagar": "",
+      "estado_credito": true,
+      "pago_credito": false,
+      "solicitado": true,
+      "adeudo": true,
+      "historial": [
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 25000
+        },
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 15750
+        }
+      ]
+    },
+    {
+      "id": "GEMAGTD4446-15588",
+      "nombre": "Gema Fayett",
+      "correo": "gema@gmail.com",
+      "cedula": "GEMAGTD4446",
+      "valor_solicitado": 100000,
+      "fecha_pagar": "30/11/2021",
       "estado_credito": false,
       "pago_credito": false,
       "solicitado": true,

@@ -35,7 +35,6 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     if (!this.submitForm.valid) {
-      console.log(this.submitForm)
       return;
     }
     
@@ -44,7 +43,6 @@ export class FormularioComponent implements OnInit {
     values.pago_credito = false;
     values.solicitado = false;
     values.historial = [];
-    console.log(values);
   }
 
 }

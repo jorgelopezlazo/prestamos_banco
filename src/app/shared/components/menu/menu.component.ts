@@ -32,7 +32,6 @@ export class MenuComponent implements OnInit {
   }
 
   validar_ruta(menu: string) {
-    console.log(menu)
     localStorage.setItem('ruta_menu', menu);
   }
 
