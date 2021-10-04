@@ -22,11 +22,11 @@
       "correo": "rodrigo@gmail.com",
       "cedula": "RODFUE3422",
       "valor_solicitado": 45000,
-      "fecha_pagar": "24/12/2021",
+      "fecha_pagar": "",
       "estado_credito": true,
-      "pago_credito": false,
+      "pago_credito": true,
       "solicitado": true,
-      "adeudo": true,
+      "adeudo": false,
       "historial": [
         {
           "fecha_autorizado": "03/10/2021",
@@ -39,6 +39,10 @@
         {
           "fecha_autorizado": "03/10/2021",
           "prestamo": 49000
+        },
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 45000
         }
       ]
     },
@@ -49,6 +53,19 @@
       "cedula": "PEDREDJJ333",
       "valor_solicitado": 95000,
       "fecha_pagar": "28/10/2021",
+      "estado_credito": false,
+      "pago_credito": false,
+      "solicitado": true,
+      "adeudo": false,
+      "historial": []
+    },
+    {
+      "id": "ROB4532-1436",
+      "nombre": "Roberto Zambada",
+      "correo": "roberto@gmail.com",
+      "cedula": "ROB4532",
+      "valor_solicitado": 18000,
+      "fecha_pagar": "",
       "estado_credito": false,
       "pago_credito": false,
       "solicitado": true,

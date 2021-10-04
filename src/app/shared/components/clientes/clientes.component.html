@@ -69,8 +69,11 @@
                     *ngIf="(element.solicitado == false) || (element.solicitado == true && element.estado_credito === true && element.adeudo === false)" matTooltip="Solicitar prestamo">
                     <mat-icon>refresh</mat-icon>
                 </button> -->
-                <a (click)="solicitarPrestamo(element)"
-                    *ngIf="(element.solicitado == false) || (element.solicitado == true && element.estado_credito === true && element.adeudo === false)"
+                <a *ngIf="(element.solicitado == true && element.estado_credito === true && element.adeudo === false)" (click)="openDialogInput(element)"
+                    matTooltip="Solicitar prestamo">
+                    <mat-icon>refresh</mat-icon>
+                </a>
+                <a *ngIf="(element.solicitado == false)" (click)="solicitarPrestamo(element)"
                     matTooltip="Solicitar prestamo">
                     <mat-icon>refresh</mat-icon>
                 </a>

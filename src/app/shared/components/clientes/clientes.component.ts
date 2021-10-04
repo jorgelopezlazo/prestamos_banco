@@ -8,6 +8,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
+import { ConfirmMontoComponent } from '../confirm-monto/confirm-monto.component';
 
 
 @Component({
@@ -57,6 +58,14 @@ export class ClientesComponent implements OnInit {
     this.matDialog.open(ConfirmDialogComponent, {
       data: historial,
     })
+  }
+
+  openDialogInput(value: any) {
+    console.log(value)
+    const dialogo1 = this.matDialog.open(ConfirmMontoComponent)
+    dialogo1.afterClosed().subscribe(cantidad => {
+      console.log(cantidad)
+    });
   }
 
   solicitarPrestamo(data: any) {
