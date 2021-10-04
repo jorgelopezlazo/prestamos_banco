@@ -7,7 +7,6 @@ import { Cliente } from '../interfaces/cliente.interface';
   styleUrls: ['./cliente.component.scss']
 })
 export class ClienteComponent implements OnInit {
-  // @Input() cliente!: Cliente;
   constructor() { }
 
   ngOnInit(): void {
