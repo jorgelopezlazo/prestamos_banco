@@ -9,6 +9,7 @@ import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { ConfirmMontoComponent } from '../confirm-monto/confirm-monto.component';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -70,10 +71,12 @@ export class ClientesComponent implements OnInit {
     if (!data.solicitado) {
       random_boolean = Math.random() >= 0.5;
     }
-    if(random_boolean) data.historial.push({
-      'fecha_autorizado': date.toLocaleString("en-GB").substring(0,10),
-      'prestamo': data.valor_solicitado
-    })
+    if(random_boolean) {
+      data.historial.push({
+        'fecha_autorizado': date.toLocaleString("en-GB").substring(0,10),
+        'prestamo': data.valor_solicitado
+      })
+    } 
 
     const cliente: Cliente = {
       id: data?.id,
@@ -92,6 +95,7 @@ export class ClientesComponent implements OnInit {
     this.clienteSvc.editCliente(cliente)
       .pipe(
         tap((cliente) => {
+          environment.capital = environment.capital - data.valor_solicitado
           this.listarClientes();
         })
       )
@@ -116,6 +120,7 @@ export class ClientesComponent implements OnInit {
     this.clienteSvc.editCliente(cliente)
       .pipe(
         tap((cliente) => {
+          environment.capital = environment.capital + data.valor_solicitado
           this.listarClientes();
         })
       )

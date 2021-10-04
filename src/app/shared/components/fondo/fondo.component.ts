@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-fondo',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fondo.component.scss']
 })
 export class FondoComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
+
+ Environment: any = environment;
 
 }
