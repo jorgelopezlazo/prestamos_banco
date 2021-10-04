@@ -41,6 +41,7 @@ export class ClientesComponent implements OnInit {
         }
         this.clientes = clientes
         this.dataSource = new MatTableDataSource(this.clientes)
+        if (this.clientes.length) this.dataSource.paginator = this.paginator;
       })
     )
     .subscribe();
@@ -133,6 +134,7 @@ export class ClientesComponent implements OnInit {
   }
 
   ngAfterViewInit() {
+    console.log(this.clientes.length)
     if (this.clientes.length) this.dataSource.paginator = this.paginator;
 
   }

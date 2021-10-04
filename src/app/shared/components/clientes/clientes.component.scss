@@ -12,11 +12,17 @@ table {
 
   .iconos-tabla a{
       cursor: pointer;
-      margin-right: 10px;
+      margin-right: 15px;
   }
+
+  .iconos-tabla mat-icon{
+    font-size: 30px;
+}
 
   .mat-form-field {
     font-size: 14px;
     width: 100%;
   }
+
+
 
