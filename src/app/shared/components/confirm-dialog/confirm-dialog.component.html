@@ -1,0 +1,13 @@
+<div style="width: 250px;">
+    <table border="1" style="width: 248px;">
+        <tr>
+            <th *ngIf="data.length === 0">Sin historial</th>
+            <th *ngIf="data.length">Fecha solicitada</th>
+            <th *ngIf="data.length">Cantidad</th>
+        </tr>
+        <tr *ngFor="let item of data">
+            <td>{{item.fecha_autorizado}}</td>
+            <td>${{item.prestamo}}.00</td>
+        </tr>
+    </table>
+</div>

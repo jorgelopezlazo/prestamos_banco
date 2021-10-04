@@ -1,52 +1,59 @@
 {
+  "fondo_banco": {
+    "fondo": 1000000
+  },
   "clientes": [
     {
-      "id": 0,
-      "nombre": "Rodolfo Pulido",
-      "correo": "rodolfo.pulido@gmail.com",
-      "cedula": "INFR5675",
-      "valor_solicitado": 50000,
-      "fecha_pagar": "05/10/2021",
+      "id": "ERFIM34564-5540",
+      "nombre": "Erick Fimbres",
+      "correo": "erick@gmail.com",
+      "cedula": "ERFIM34564",
+      "valor_solicitado": 14500,
+      "fecha_pagar": "",
       "estado_credito": false,
       "pago_credito": false,
-      "solicitado": false,
-      "adeudo": false
+      "solicitado": true,
+      "adeudo": false,
+      "historial": []
     },
     {
-      "id": 1,
-      "nombre": "Esteban Valenzuela",
-      "correo": "esteban@gmail.com",
-      "cedula": "ESFR5675",
-      "valor_solicitado": 80000,
-      "fecha_pagar": "17/10/2021",
+      "id": "RODFUE3422-13643",
+      "nombre": "Rodrigo Fuentes",
+      "correo": "rodrigo@gmail.com",
+      "cedula": "RODFUE3422",
+      "valor_solicitado": 45000,
+      "fecha_pagar": "24/12/2021",
       "estado_credito": true,
       "pago_credito": false,
       "solicitado": true,
-      "adeudo": false
+      "adeudo": true,
+      "historial": [
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 45000
+        },
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 15000
+        },
+        {
+          "fecha_autorizado": "03/10/2021",
+          "prestamo": 49000
+        }
+      ]
     },
     {
-      "id": 2,
-      "nombre": "Erick Fimbres",
-      "correo": "erick.fimbres@gmail.com",
-      "cedula": "EFFC5675",
-      "valor_solicitado": 10000,
-      "fecha_pagar": "21/10/2021",
-      "estado_credito": true,
-      "pago_credito": true,
-      "solicitado": true,
-      "adeudo": false
-    },
-    {
-      "id": 3,
-      "nombre": "Ricardo Echeverría",
-      "correo": "ricardo@gmail.com",
-      "cedula": "RCEV5675",
-      "valor_solicitado": 100000,
-      "fecha_pagar": "15/10/2021",
-      "estado_credito": true,
+      "id": "PEDREDJJ333-19610",
+      "nombre": "Pedro Jimenez",
+      "correo": "pedro@gmail.com",
+      "cedula": "PEDREDJJ333",
+      "valor_solicitado": 95000,
+      "fecha_pagar": "28/10/2021",
+      "estado_credito": false,
       "pago_credito": false,
       "solicitado": true,
-      "adeudo": true
+      "adeudo": false,
+      "historial": []
     }
   ]
 }

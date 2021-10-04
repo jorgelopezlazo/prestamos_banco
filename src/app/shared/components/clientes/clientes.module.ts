@@ -12,6 +12,8 @@ import { CrearClienteComponent } from './crear-cliente/crear-cliente.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -19,6 +21,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ClientesComponent,
     CrearClienteComponent
   ],
+  entryComponents: [ConfirmDialogComponent],
   imports: [
     CommonModule,
     ClientesRoutingModule,
@@ -29,7 +32,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ]
 })
 export class ClientesModule { }

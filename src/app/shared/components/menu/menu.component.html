@@ -21,15 +21,15 @@
                     <mat-icon class="icono-menu">person_add</mat-icon>
                     Nuevo Cliente
                 </a> -->
-                <a mat-list-item [routerLink]="['clientes']">
+                <a mat-list-item (click)="validar_ruta('clientes')" [routerLink]="['clientes']">
                     <mat-icon class="icono-menu">perm_contact_calendar</mat-icon>
                     Clientes
                 </a>
-                <a mat-list-item [routerLink]="['clientes/aprobados']">
+                <a mat-list-item (click)="validar_ruta('aprobadas')" [routerLink]="['clientes/aprobados']">
                     <mat-icon class="icono-menu">done_outline</mat-icon>
                     Solicitudes aprobadas
                 </a>
-                <a mat-list-item [routerLink]="['clientes/rechazados']">
+                <a mat-list-item (click)="validar_ruta('rechazadas')" [routerLink]="['clientes/rechazados']">
                     <mat-icon class="icono-menu">cancel</mat-icon>
                     Solicitudes rechazadas
                 </a>

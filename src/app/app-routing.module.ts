@@ -4,7 +4,8 @@ import { CrearClienteComponent } from './shared/components/clientes/crear-client
 
 const routes: Routes = [
   { path: 'clientes', loadChildren: () => import('./shared/components/clientes/clientes.module').then(m => m.ClientesModule) },
-  // { path: 'clientes/nuevo', loadChildren: () => import('./shared/components/formulario/formulario.module').then(m => m.FormularioModule) },
+  { path: 'clientes/aprobados', loadChildren: () => import('./shared/components/clientes/clientes.module').then(m => m.ClientesModule) },
+  { path: 'clientes/rechazados', loadChildren: () => import('./shared/components/clientes/clientes.module').then(m => m.ClientesModule) },
   { path: 'clientes/nuevo', component: CrearClienteComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

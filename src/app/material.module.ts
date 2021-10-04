@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
         ReactiveFormsModule,
         MatNativeDateModule,
         MatTableModule,
-        MatGridListModule
+        MatGridListModule,
+        MatDialogModule
     ],
     providers: [
         MatDatepickerModule

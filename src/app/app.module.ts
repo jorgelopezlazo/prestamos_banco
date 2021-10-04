@@ -23,6 +23,9 @@ import { FondoComponent } from './shared/components/fondo/fondo.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
+import { ConfirmMontoComponent } from './shared/components/confirm-monto/confirm-monto.component';
 
 
 
@@ -33,6 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MenuComponent,
     ClienteComponent,
     FondoComponent,
+    ConfirmDialogComponent,
+    ConfirmMontoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatDatepickerModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
